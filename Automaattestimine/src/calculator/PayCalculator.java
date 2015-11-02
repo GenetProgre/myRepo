@@ -1,11 +1,11 @@
 package calculator;
 
 public class PayCalculator {
-	
+
 	public static final int JUNIOR = 1;
 	public static final int SENIOR = 2;
 	public static final int SPECIALIST = 3;
-	
+
 	public int payJunior(int sum, final int hours) {
 		if (hours > 8) {
 			sum = 10 * (hours - 8) * 2;
