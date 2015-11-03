@@ -13,6 +13,8 @@ public class PayCalculator {
 	public static final int JUNIOR_BONUS = 10;
 	public static final int SENIOR_BONUS = 20;
 	public static final int SPECIALIST_BONUS = 30;
+	public static final int BONUS_HOURS = 20;
+	
 
 	public int payJunior(int sum, final int hours) {
 		if (hours > JUNIOR_AND_SENIOR_LIMIT) {
@@ -71,7 +73,7 @@ public class PayCalculator {
 		if (type == SPECIALIST) {
 			sum = paySpecialist(sum, hours);
 		}
-		if (hours > 20) {
+		if (hours > BONUS_HOURS) {
 			sum += payBonus(type, sum);
 		}
 		return sum;
