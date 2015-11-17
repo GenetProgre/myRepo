@@ -61,13 +61,13 @@ public class PayCalculator {
 	public int pay(final int type, final int hours) {
 		int sum = 0;
 		if (type == JUNIOR) {
-			sum = payJunior(sum, hours);
+			sum += payJunior(sum, hours);
 		}
 		if (type == SENIOR) {
-			sum = paySenior(sum, hours);
+			sum += paySenior(sum, hours);
 		}
 		if (type == SPECIALIST) {
-			sum = paySpecialist(sum, hours);
+			sum += paySpecialist(sum, hours);
 		}
 		if (hours > BONUS_HOURS) {
 			sum += payBonus(type, sum);
