@@ -22,10 +22,9 @@ public class JSonTest {
 	public void mockingCommentsSize() {
 		JSon json = mock(JSon.class);
 		JSONArray commentsArray = mock(JSONArray.class);
-		when(commentsArray.size()).thenReturn(500);
 		int commentsArraySize = commentsArray.size();
-		json.getCommentsData(commentsArray);
 		when(json.getCommentsData(commentsArray)).thenReturn(commentsArraySize);
+		when(commentsArray.size()).thenReturn(500);
 		verify(commentsArray, times(1)).size();
 	}
 	
@@ -33,11 +32,10 @@ public class JSonTest {
 	public void mockingTodosSize() {
 		JSon json = mock(JSon.class);
 		JSONArray todosArray = mock(JSONArray.class);
-		when(todosArray.size()).thenReturn(200);
 		int todosArraySize = todosArray.size();
-		json.getCommentsData(todosArray);
-		when(json.getCommentsData(todosArray)).thenReturn(todosArraySize);
+		when(json.getTodosData(todosArray)).thenReturn(todosArraySize);
 //		when(json.getCommentsData(todosArray)).thenReturn(todosArray.size());
+		when(todosArray.size()).thenReturn(200);
 		verify(todosArray, times(1)).size();
 	}
 	
